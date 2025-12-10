@@ -3,39 +3,50 @@
 #include "LongestLine.h"
 #include "HelloWorld.h"
 #include "NumberGuesser.h"
+#include "ReadNumberFromLine.h"
+#include "CountingBitsInNumber.h"
+#include "StringFinder.h"
 
 int main()
 {
-	int c;
+	int input;
 	do {
 		printf("Wähle aus welches Program du starten willst:\n");
 		printf("1: DigitPaster\n");
 		printf("2: LongestLine\n");
 		printf("3: HelloWorld\n");
 		printf("4: NumberGuesser\n");
+		printf("5: BitCounter\n");
+		printf("6: PatternFinder\n");
 		printf("0: Exit\n");
 		printf("////////////////////////////////////////////////////////////\n");
 
-		c = getchar();
+		input = readNumberFromInput();
 
-		switch (c) 
+		switch (input) 
 		{
-			case '1':
+			case 1:
 				playDigitPaster();
 				break;
-			case '2':
+			case 2:
 				playLongestLine();
 				break;
-			case '3':
+			case 3:
 				playHelloWorld();
 				break;
-			case '4':
+			case 4:
 				playNumberGuesser();
+				break;
+			case 5:
+				playBitCounter();
+				break;
+			case 6:
+				playStringFinder();
 				break;
 		}
 		printf("//////////////////////////////////////////\n");
 
-	} while (c != '0');
+	} while (input != 0);
 
 	printf("Thank you for playing!");
 }

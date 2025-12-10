@@ -128,17 +128,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CountingBitsInNumber.c" />
+    <ClCompile Include="DebugProgram.c" />
     <ClCompile Include="DigitPaster.c" />
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="LongestLine.c" />
     <ClCompile Include="NumberGuesser.c" />
     <ClCompile Include="Program.c" />
+    <ClCompile Include="ReadTextFromLine.c" />
+    <ClCompile Include="ReadNumberFromLine.c" />
+    <ClCompile Include="StringFinder.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CountingBitsInNumber.h" />
     <ClInclude Include="DigitPaster.h" />
     <ClInclude Include="HelloWorld.h" />
     <ClInclude Include="LongestLine.h" />
     <ClInclude Include="NumberGuesser.h" />
+    <ClInclude Include="ReadNumberFromLine.h" />
+    <ClInclude Include="ReadTextFromLine.h" />
+    <ClInclude Include="StringFinder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

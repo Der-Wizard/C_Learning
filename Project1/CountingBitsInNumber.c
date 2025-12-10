@@ -1,30 +1,54 @@
 #include <stdio.h>
+#include "ReadNumberFromLine.h"
 
 //K&R C, Exercise 2.9
 
-int CountBitsInNumber() {
-	int input = 5; //pretend this number is a user input
+static int bitcount(unsigned x);
+static int bitcountOpt(unsigned x);
+
+int playBitCounter(void) {
+	printf("Input a number and confirm with Enter to determine how many bits it has.\n");
+	printf("//////////////////////////////////////////\n");
+
+	int input = readNumberFromInput();
+
+	printf("\n");
 
 	bitcount(input);
 	bitcountOpt(input);
+
+	return 0;
 }
 
 //suboptimal example
-int bitcount(unsigned x) {
+static int bitcount(unsigned x) {
+	int iterations = 0;
+
 	int b;
-	for (b = 0; x != 0; x >>= 1)
+	for (b = 0; x != 0; x >>= 1) {
+		++iterations;
 		if (x & 01)
 			b++;
+	}
+
+	printf("It took %d iterations in the regular version to find the correct solution!\n", iterations);
+
 	return b;
 }
 
 //optimal example
-int bitcountOpt(unsigned x) {
+static int bitcountOpt(unsigned x) {
+	int iterations = 0;
+
 	int b = 0;
 	while (x != 0) {
+		++iterations;
 		x &= (x - 1);
 		b++;
 	}
+
+	printf("It took %d iterations in the optimized version to find the correct solution!\n", iterations);
+
 	return b;
 }
 

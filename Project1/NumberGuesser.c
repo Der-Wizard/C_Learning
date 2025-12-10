@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "ReadNumberFromLine.h"
 
 #define MAXLINE 4
 
 static int secret = 0;
 static int number = 0;
 
-static void ng_readNumber(void);
 static void ng_generateSecretNumber(void);
 
 int playNumberGuesser() 
@@ -22,7 +22,7 @@ int playNumberGuesser()
 
 	while (1)
 	{
-		ng_readNumber();
+		number = readNumberFromInput();
 
 		++attempts;
 
@@ -46,25 +46,6 @@ int playNumberGuesser()
 
 	printf("It took you %d attempts to get it right!\n", attempts);
 	return 0;
-}
-
-static void ng_readNumber(void)
-{
-	int c;
-
-	number = 0;
-
-	while ((c=getchar()) != EOF) 
-	{
-		if (c == '\n')
-			break;
-		if (c >= '0' && c <= '9') 
-			number = number * 10 + (c - '0'); //Example: 15 saved, 5 pressed => 15 * 10 => 150 + 5 => 155
-		else {} //invalid, skip
-	}
-
-	if (c == EOF)
-		number = EOF;
 }
 
 static void ng_generateSecretNumber(void) 
