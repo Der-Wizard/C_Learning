@@ -45,6 +45,12 @@
     <ClCompile Include="DebugProgram.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PolishCalculator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolishCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DigitPaster.h">

@@ -6,6 +6,7 @@
 #include "ReadNumberFromLine.h"
 #include "CountingBitsInNumber.h"
 #include "StringFinder.h"
+#include "PolishCalculator.h"
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
 		printf("4: NumberGuesser\n");
 		printf("5: BitCounter\n");
 		printf("6: PatternFinder\n");
+		printf("7: PolishCalculator\n");
 		printf("0: Exit\n");
 		printf("////////////////////////////////////////////////////////////\n");
 
@@ -42,6 +44,9 @@ int main()
 				break;
 			case 6:
 				playStringFinder();
+				break;
+			case 7:
+				playCalculator();
 				break;
 		}
 		printf("//////////////////////////////////////////\n");

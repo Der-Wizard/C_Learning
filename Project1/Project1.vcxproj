@@ -133,6 +133,8 @@
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="LongestLine.c" />
     <ClCompile Include="NumberGuesser.c" />
+    <ClCompile Include="PolishCalculator.c" />
+    <ClCompile Include="PolishCalculator.h" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="ReadTextFromLine.c" />
     <ClCompile Include="ReadNumberFromLine.c" />
